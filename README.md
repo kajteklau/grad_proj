@@ -30,3 +30,16 @@ Other components (e.g., testbench, modified Grove IMU drivers, and Jupyter noteb
 3. **Programming Adjustments**: Workarounds (e.g., breaking formulas into smaller components) were necessary to comply with HLS constraints.
 
 The FPGA block design was streamlined by removing unused peripherals to free LUT space. The custom function map connects to the Processing System (PS) via Xilinx's AXI4 DMA interface, ensuring efficient communication.
+
+## Snapshots of Final Design
+### Final System FPGA Block Design as Implemented
+![base_new](https://github.com/user-attachments/assets/b5209e99-796d-40e4-b6d3-0931c67adbe8)
+### Proposed Parallel Compute Design (Not Implemented to System due to Lack of LUT Space)
+![functionality_test](https://github.com/user-attachments/assets/6103afe0-4977-4328-bcf8-bda9dde30392)
+### Functionality Testing with Parallel Compute Lanes in PL
+![Methodology_Parallel_ADIRU_DIS](https://github.com/user-attachments/assets/41602e7a-219c-4544-a8b3-d12ca26f5ce4)
+### Logic Diagram of Final System Design as Implemented
+![Intial_System_Design_2](https://github.com/user-attachments/assets/e380c739-af4f-49a3-8fd5-63f4862375b5)
+
+
+
