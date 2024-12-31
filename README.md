@@ -26,7 +26,7 @@ Other components (e.g., testbench, modified Grove IMU drivers, and Jupyter noteb
 
 ### Design Constraints
 1. **FPGA Resource Limits**: The function map had to fit the small PYNQ Z2 FPGA fabric (LUTs).
-2. **Vitis HLS Restrictions**: Dynamic memory allocation, recursion, and complex control flows were avoided. Fixed-point data types were preferred over floating-point for compatibility.
+2. **Vitis HLS Restrictions**: Dynamic memory allocation, recursion, and complex control flows were avoided as they can't be synthesized by Vitis HLS. Fixed-point data types were preferred over floating-point for compatibility and LUT utilization optimization.
 3. **Programming Adjustments**: Workarounds (e.g., breaking formulas into smaller components) were necessary to comply with HLS constraints.
 
 The FPGA block design was streamlined by removing unused peripherals to free LUT space. The custom function map connects to the Processing System (PS) via Xilinx's AXI4 DMA interface, ensuring efficient communication.
